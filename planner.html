@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pinnacle - Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Pinnacle - Investment Planner 🚀</h1>
+    <p>Get personalized investment advice based on your salary and risk appetite.</p>
+
+    <label>Enter your monthly salary (₹)</label>
+    <input type="number" id="salary" placeholder="Enter your salary">
+
+    <label>What % of your salary would you like to invest?</label>
+    <input type="range" id="percentage" min="5" max="50" value="10" oninput="updatePercentage(this.value)">
+    <p id="percent-display">10%</p>
+
+    <label>Select your risk appetite:</label>
+    <div>
+      <input type="radio" name="risk" value="low" checked> Low
+      <input type="radio" name="risk" value="medium"> Medium
+      <input type="radio" name="risk" value="high"> High
+    </div>
+
+    <button onclick="calculateInvestment()">Calculate</button>
+
+    <div id="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
